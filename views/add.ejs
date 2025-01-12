@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add User</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Add User</h1>
+    <% if (errors) { %>
+    <ul>
+      <% errors.forEach(error => { %>
+      <li><%= error.msg %></li>
+      <% }) %>
+    </ul>
+    <% } %>
+    <form method="POST" action="/add">
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="number" name="age" placeholder="Age" />
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>
